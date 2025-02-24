@@ -1,0 +1,392 @@
+/* 基础样式 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* 头部样式 */
+.chat-header {
+    background-color: #343541;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chat-header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* 按钮通用样式 */
+.tool-button, #logout-button, #send-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+    color: white;
+    font-size: 14px;
+}
+
+#logout-button {
+    background-color: #80bb76;
+}
+
+#logout-button:hover {
+    background-color: #cc0000;
+}
+
+/* 聊天区域 */
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f6f7fb;
+}
+
+/* 工具栏样式 */
+.tools-container {
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search-button {
+    background-color: #4CAF50;
+}
+
+.search-button:hover {
+    background-color: #45a049;
+}
+
+.push-button {
+    background-color: #6495ED;
+}
+
+.push-button:hover {
+    background-color: #4169E1;
+}
+
+.upload-button, .image-button {
+    background-color: #6c757d;
+}
+
+.upload-button:hover, .image-button:hover {
+    background-color: #5a6268;
+}
+
+/* 输入容器样式 */
+.input-container {
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #dee2e6;
+}
+
+/* 消息样式 */
+.message {
+    margin: 10px 0;
+    display: flex;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message.bot {
+    justify-content: flex-start;
+}
+
+.message-content {
+    background-color: #f1f0f0;
+    border-radius: 12px;
+    padding: 12px 16px;
+    max-width: 70%;
+}
+
+.message.user span {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 12px;
+    max-width: 70%;
+    line-height: 1.5;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.message.bot span {
+    background-color: #f1f0f0;
+    color: #333;
+    padding: 12px 16px;
+    border-radius: 12px;
+    max-width: 70%;
+    line-height: 1.5;
+}
+
+/* 思考部分样式 */
+.think-section {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid #6c757d;
+}
+
+.think-section .section-label {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.think-content {
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.section-divider {
+    border-top: 1px solid #e0e0e0;
+    margin: 15px 0;
+}
+
+/* 响应部分样式 */
+.response-section {
+    color: #333;
+    padding: 8px 12px;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.section-label {
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.section-divider {
+    border-top: 1px solid #e0e0e0;
+    margin: 8px 0;
+}
+
+/* 聊天页脚样式 */
+.chat-footer {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+#user-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#send-button {
+    background-color: #007bff;
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+}
+
+/* 搜索结果样式 */
+.search-results {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-result {
+    border-left: 4px solid #4CAF50;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.result-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.result-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.result-url {
+    font-size: 12px;
+    color: #007bff;
+}
+
+.result-url a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.result-url a:hover {
+    text-decoration: underline;
+}
+
+/* 新闻卡片样式 */
+.news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    max-width: 100%;
+}
+
+.news-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.news-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.news-card-content {
+    padding: 15px;
+}
+
+.news-source {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.news-source.bbc {
+    background-color: #bb1919;
+}
+
+.news-source.europa {
+    background-color: #004494;
+}
+
+.news-source.people {
+    background-color: #c00;
+}
+
+.news-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.news-summary {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.news-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.news-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.news-link i {
+    font-size: 12px;
+}
+
+/* 文件处理样式 */
+.file-processing {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.file-content {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+
+/* 图片预览样式 */
+.image-preview {
+    max-width: 300px;
+    max-height: 300px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .tools-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .tool-button {
+        width: 100%;
+    }
+    
+    .message span {
+        max-width: 85%;
+    }
+    
+    .chat-footer {
+        padding: 10px;
+    }
+}

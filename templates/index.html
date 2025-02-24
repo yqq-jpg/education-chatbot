@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baidu AI Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <div class="chat-header">
+            <h1>Baidu AI Chatbot</h1>
+            <button id="logout-button">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+        
+        <div class="chat-box" id="chat-box">
+
+        </div>
+        
+        <div class="input-container">
+
+            <div class="tools-container">
+                <button id="search-button" class="tool-button search-button">
+                    <i class="fas fa-search"></i> Enable search
+                </button>
+                <button id="push-button" class="tool-button push-button">
+                    <i class="fas fa-newspaper"></i> push news
+                </button>
+                <button id="file-upload-button" class="tool-button upload-button">
+                    <i class="fas fa-file-upload"></i> Upload files
+                </button>
+                <button id="image-upload-button" class="tool-button image-button">
+                    <i class="fas fa-image"></i> Upload pictures
+                </button>
+            </div>
+
+            <!-- 文件输入 -->
+            <input type="file" id="file-input" accept=".txt,.pdf,.docx,.pptx,.csv,.xlsx" style="display: none;">
+            <input type="file" id="image-input" accept=".png,.jpg,.jpeg,.bmp,.webp" style="display: none;">
+            
+            <!-- 用户输入栏 -->
+            <div class="chat-footer">
+                <textarea id="user-input" placeholder="Type your message here..." rows="1"></textarea>
+                <button id="send-button">
+                    <i class="fas fa-paper-plane"></i> Send
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

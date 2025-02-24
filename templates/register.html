@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Baidu AI Chatbot</title>
+    <link rel="stylesheet" href="/static/style1.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Register</h2>
+        <form method="POST" action="/register">
+            <input type="text" name="username" placeholder="用户名" required>
+            <input type="password" name="password" placeholder="密码" required>
+            <button type="submit">register</button>
+        </form>
+        <p>Already have an account? <a href="/login">login</a></p>
+    </div>
+</body>
+
+</html>
